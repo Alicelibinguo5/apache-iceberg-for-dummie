@@ -22,7 +22,7 @@ A hands-on tutorial for Apache Iceberg with Spark and Trino.
 
 ## Quick Start
 
-### 1. Spark + Iceberg (Working)
+### Spark + Iceberg (Recommended - Working ✓)
 
 ```bash
 # Run the Spark notebook
@@ -36,16 +36,18 @@ This notebook demonstrates:
 - Time travel queries
 - Schema evolution
 
-### 2. Trino + Iceberg (Work in Progress)
+**This is the recommended way to learn Apache Iceberg!**
 
-```bash
-# Build and start Trino
-docker compose build trino
-docker compose up -d
+### Trino + Iceberg (Reference Only - Not Working)
 
-# Test connection
-python3 test_trino.py
-```
+⚠️ **Note**: The Trino setup is currently not functional due to catalog configuration challenges with file-based storage. See "Known Issues" below for details.
+
+The `02_trino_iceberg_setup.ipynb` notebook and `test_trino.py` script are provided as reference for future implementation.
+
+**For a working Trino + Iceberg setup, you would need:**
+- Cloud storage (S3, GCS, or Azure Blob)
+- Or a properly configured Hive Metastore with PostgreSQL
+- Or Nessie catalog server
 
 ## Current Status
 

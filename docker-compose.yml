@@ -1,4 +1,10 @@
 services:
+  # Note: Trino + Iceberg configuration is a work in progress
+  # For now, use 01_spark_iceberg_setup.ipynb for working examples
+  # 
+  # Known issue: File-based catalogs have path compatibility issues
+  # Recommended: Use cloud storage (S3/GCS) or external Hive metastore
+  
   trino:
     build:
       context: ./trino
@@ -8,3 +14,5 @@ services:
       - ./warehouse:/warehouse
     ports:
       - "8081:8080"
+    # Trino will fail to start with current catalog config
+    # This is intentional - see README.md for details
