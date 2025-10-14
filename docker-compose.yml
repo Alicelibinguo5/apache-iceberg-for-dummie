@@ -1,15 +1,4 @@
 services:
-  iceberg-rest:
-    image: tabulario/iceberg-rest:latest
-    environment:
-      - CATALOG_CATALOG__IMPL=org.apache.iceberg.hadoop.HadoopCatalog
-      - CATALOG_WAREHOUSE=file:///warehouse
-      - CATALOG_IO__IMPL=org.apache.iceberg.hadoop.HadoopFileIO
-    volumes:
-      - ./warehouse:/warehouse
-    ports:
-      - "8181:8181"
-
   trino:
     build:
       context: ./trino
@@ -19,5 +8,3 @@ services:
       - ./warehouse:/warehouse
     ports:
       - "8081:8080"
-    depends_on:
-      - iceberg-rest
