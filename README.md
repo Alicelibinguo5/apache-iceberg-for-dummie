@@ -2,6 +2,11 @@
 
 A hands-on tutorial for Apache Iceberg with Spark and Trino.
 
+# Blogs 
+if you like to read blogs with code walkthough, here is links 
+- Iceberg with spark: https://medium.com/@glbviolin/iceberg-ahead-and-why-you-should-be-excited-ff0dcb760fc1
+
+
 ## Project Structure
 
 ```
