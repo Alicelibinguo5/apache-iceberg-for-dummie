@@ -6,25 +6,6 @@ A hands-on tutorial for Apache Iceberg with Spark and Trino.
 if you like to read blogs with code walkthough, here is links 
 - Iceberg with spark: https://medium.com/@glbviolin/iceberg-ahead-and-why-you-should-be-excited-ff0dcb760fc1
 
-
-## Project Structure
-
-```
-.
-├── 01_spark_iceberg_setup.ipynb    # Spark + Iceberg tutorial (WORKING ✓)
-├── 02_trino_iceberg_setup.ipynb    # Trino + Iceberg tutorial (WIP)
-├── docker-compose.yml               # Docker services configuration
-├── trino/
-│   ├── Dockerfile                   # Custom Trino image with baked-in config
-│   └── etc/                        # Trino configuration files
-│       ├── config.properties
-│       ├── jvm.config
-│       ├── node.properties
-│       └── catalog/
-│           └── iceberg.properties  # Iceberg catalog configuration
-└── warehouse/                      # Iceberg table storage (gitignored)
-```
-
 ## Quick Start
 
 ### Spark + Iceberg (Recommended - Working ✓)
